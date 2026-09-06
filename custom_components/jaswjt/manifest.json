@@ -1,0 +1,14 @@
+{
+  "domain": "jaswjt",
+  "name": "吉安水务",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/ytcquqyl/jaswjt-ha",
+  "issue_tracker": "https://github.com/ytcquqyl/jaswjt-ha/issues",
+  "requirements": [],
+  "authors": ["@ytcquqyl"],
+  "codeowners": ["@ytcquqyl"],
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "icon": "./logo.png"
+}
