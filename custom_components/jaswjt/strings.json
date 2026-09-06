@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "吉安水务 - 添加账户",
+        "description": "填写 JSESSIONID 和户号。\n\nJSESSIONID 获取方法：在手机上用 Charles / Fiddler 抓包，打开吉安水务微信小程序，找到 method=userinfo 请求的响应头 Set-Cookie 中的 JSESSIONID=... 值。\n\n户号：多个户号用逗号分隔，例如 12345678, 87654321。",
+        "data": {
+          "session_id": "JSESSIONID",
+          "accounts": "户号（多个用逗号分隔）"
+        }
+      }
+    },
+    "error": {
+      "invalid_session": "会话无效或已过期",
+      "unknown": "未知错误"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "吉安水务 - 修改设置",
+        "description": "JSESSIONID 过期后在此更新。",
+        "data": {
+          "session_id": "JSESSIONID",
+          "accounts": "户号（多个用逗号分隔）"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {},
+    "binary_sensor": {
+      "unpaid": {"name": "是否欠费"}
+    }
+  }
+}
