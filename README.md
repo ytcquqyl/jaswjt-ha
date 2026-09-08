@@ -145,6 +145,17 @@ A: API 只返回最近 5 个月的数据。首次配置后，系统会自动保�
 
 欢迎提交 Issue 和 Pull Request！
 
+## 更新日志
+
+### v1.0.1 (2026-09-07)
+
+- 修复：`JaswjtClient` 暴露 `accounts` / `session_id` 公开属性，替代之前直接访问私有 `_accounts` 的写法
+- 清理：删除 `const.py` 中未使用的 `DEFAULT_SCAN_INTERVAL = 900`（`__init__.py` 里的 `timedelta(minutes=15)` 才是权威定义）
+
+### v1.0.0 (2026-09-06)
+
+- 首次发布：吉安水务自定义集成，支持多户号、当月/历史传感器、欠费二值传感器、15 分钟轮询续命
+
 ## 许可证
 
 本项目采用 [MIT 许可证](LICENSE)。
