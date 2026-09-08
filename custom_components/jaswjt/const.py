@@ -7,8 +7,6 @@ DOMAIN = "jaswjt"
 CONF_SESSION_ID = "session_id"
 CONF_ACCOUNTS = "accounts"
 
-DEFAULT_SCAN_INTERVAL = 900
-
 BASE_URL = "http://www.jaswjt.com/WeChatNewsJAS"
 BILL_URL = f"{BASE_URL}/plugins/wechat.action?method=queryBill&huhao={{account}}"
 

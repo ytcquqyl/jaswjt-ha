@@ -46,7 +46,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         # 这里把新数据合并到已有数据里, 同一月份以新数据为准(覆盖)。
         previous = coordinator.data or {}
         merged: dict[str, list[BillRecord]] = {}
-        for account in client._accounts:
+        for account in client.accounts:
             by_month: dict[str, BillRecord] = {}
             for bill in previous.get(account, []):
                 by_month[bill.month] = bill

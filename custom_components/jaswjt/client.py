@@ -121,6 +121,16 @@ class JaswjtClient:
         self._accounts = [a.strip() for a in accounts if a.strip()]
         self._timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
 
+    @property
+    def accounts(self) -> list[str]:
+        """Public read-only view of configured account numbers."""
+        return list(self._accounts)
+
+    @property
+    def session_id(self) -> str:
+        """Public read-only view of the JSESSIONID."""
+        return self._session_id
+
     async def fetch_bills(self) -> dict[str, list[BillRecord]]:
         """Return ``{account: [BillRecord, ...]}`` sorted newest-first."""
         async with aiohttp.ClientSession(timeout=self._timeout) as session:

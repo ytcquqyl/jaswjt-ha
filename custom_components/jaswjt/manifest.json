@@ -1,7 +1,7 @@
 {
   "domain": "jaswjt",
   "name": "吉安水务",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "config_flow": true,
   "documentation": "https://github.com/ytcquqyl/jaswjt-ha",
   "issue_tracker": "https://github.com/ytcquqyl/jaswjt-ha/issues",
